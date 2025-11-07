@@ -50,7 +50,7 @@ const verifyFirebaseToken = async (req, res, next) => {
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
     const database = client.db("3dCollection");
     const models = database.collection("models");
     const downloads = database.collection("downloads");
@@ -146,8 +146,8 @@ async function run() {
     });
 
     //    send ping for testing
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment");
+    // await client.db("admin").command({ ping: 1 });
+    // console.log("Pinged your deployment");
   } finally {
   }
 }
